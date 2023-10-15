@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block main %}
+<h1>WELCOME TO BOGGLE</h1>
+
+{% for line in board %}
+<h3>{{line}}</h3>
+{% endfor %}
+
+<form action="/guesses">
+  <input type="text" placeholder="Make Guesses" id="guess" name="guess" />
+  <button id="submit">submit</button>
+</form>
+
+<p id="pEl"></p>
+
+<p id="score"></p>
+
+<p id="timer"></p>
+
+{% endblock %}
